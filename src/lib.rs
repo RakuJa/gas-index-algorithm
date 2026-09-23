@@ -43,6 +43,10 @@ impl GasIndexAlgorithm {
     pub fn process(&mut self, sraw: i32) -> i32 {
         self.state.process(sraw)
     }
+
+    pub fn params_mut(&mut self) -> &mut GasIndexAlgorithmParams {
+        &mut self.state
+    }
 }
 
 #[derive(Copy, Clone, PartialEq, PartialOrd, Debug)]
